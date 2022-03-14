@@ -13,7 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:elevation="0dp"
         android:fitsSystemWindows="false">
 
@@ -114,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:imeOptions="actionNext"
+                    android:imeOptions="actionDone"
                     android:inputType="textPassword"
                     android:maxLines="1" />
 
@@ -171,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.05"/>
+                app:layout_constraintGuide_percent="0.050890584" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"

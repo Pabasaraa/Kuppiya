@@ -7,4 +7,10 @@
     <string name="password">Password</string>
     <string name="log_in">Log in</string>
     <string name="not_a_member_signup">Not a member? Signup</string>
+    <string name="signup">Signup</string>
+    <string name="signup_subtext">Please sign up to continue</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="already_a_member_signin">Already a member? Signin</string>
+    <string name="sign_up">Sign up</string>
 </resources>

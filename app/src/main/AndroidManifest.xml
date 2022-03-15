@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_App">
         <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Signup"
             android:exported="false" />
         <activity

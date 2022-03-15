@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="" />
+
+    <item android:id="@+id/news"
+        android:icon="@drawable/news_icon"
+        android:title="" />
+
+    <item android:id="@+id/add"
+        android:icon="@drawable/plus_icon"
+        android:title="" />
+
+    <item android:id="@+id/jobs"
+        android:icon="@drawable/jobs_icon"
+        android:title="" />
+
+    <item android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:title="" />
+
+</menu>

@@ -13,4 +13,6 @@
     <string name="email">Email</string>
     <string name="already_a_member_signin">Already a member? Signin</string>
     <string name="sign_up">Sign up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

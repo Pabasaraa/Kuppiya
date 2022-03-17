@@ -19,14 +19,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/back_button"
+        android:id="@+id/back_button_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/profile_photo"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
@@ -43,14 +53,14 @@
         android:id="@+id/inquiries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="0dp"
-        android:minHeight="0dp"
-        android:minWidth="0dp"
         android:layout_marginTop="40dp"
-        android:textAllCaps="false"
         android:background="@android:color/transparent"
         android:fontFamily="@font/roboto_regular"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="0dp"
         android:text="@string/my_inquiries"
+        android:textAllCaps="false"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
@@ -75,8 +85,8 @@
         android:layout_marginTop="15dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/roboto_regular"
-        android:minHeight="0dp"
         android:minWidth="0dp"
+        android:minHeight="0dp"
         android:padding="0dp"
         android:text="@string/my_solutions"
         android:textAllCaps="false"
@@ -104,8 +114,8 @@
         android:layout_marginTop="15dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/roboto_regular"
-        android:minHeight="0dp"
         android:minWidth="0dp"
+        android:minHeight="0dp"
         android:padding="0dp"
         android:text="@string/profile"
         android:textAllCaps="false"

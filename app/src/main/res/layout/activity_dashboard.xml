@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fadingEdge="vertical"
-        android:layout_marginBottom="55dp"
+        android:paddingBottom="55dp"
         android:fadingEdgeLength="250dp"
         android:fillViewport="true"
+        android:overScrollMode="never"
         android:scrollbars="none">
 
         <androidx.constraintlayout.widget.ConstraintLayout

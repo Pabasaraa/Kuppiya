@@ -49,6 +49,18 @@
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="jamesS12"
+        android:textColor="@color/sub_text_color"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <Button
         android:id="@+id/inquiries"
         android:layout_width="wrap_content"
@@ -172,7 +184,7 @@
         android:layout_marginTop="40dp"
         android:paddingStart="30dp"
         android:paddingTop="2dp"
-        android:paddingEnd="20dp"
+        android:paddingEnd="30dp"
         android:paddingBottom="2dp"
         android:scaleType="fitXY"
         android:src="@color/sub_text_color"
@@ -229,7 +241,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,4 +12,6 @@
     <color name="surface">#433C4B</color>
     <color name="red">#ff0000</color>
     <color name="btn_end_color">#4169E1</color>
+    <color name="box_stroke">#B3433C4B</color>
+    <color name="box_bg">#66433C4B</color>
 </resources>

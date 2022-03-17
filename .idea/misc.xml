@@ -4,9 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/btn_bg.xml" value="0.31" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/jobs_icon.xml" value="0.245" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/news_icon.xml" value="0.245" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/selected_item.xml" value="0.31" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_dashboard.xml" value="0.20854700854700856" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_signup.xml" value="0.28931623931623934" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_main.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_splash_sreen.xml" value="0.25" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_add.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_home.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_jobs.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_news.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_user_profile.xml" value="0.25" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/menu/bottom_nav.xml" value="0.20854700854700856" />
       </map>
     </option>
   </component>

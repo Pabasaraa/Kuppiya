@@ -23,7 +23,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="@string/jobs"
         android:textColor="@color/white"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Full-Stack Developer Full Time"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -97,23 +97,22 @@
             android:textSize="10sp"
             tools:ignore="SmallSp" />
 
-        <Button
+         <Button
             android:id="@+id/visit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/roboto_regular"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
             android:text="@string/visit"
             android:textAllCaps="false"
-            android:textStyle="bold"
             android:textColor="@color/background"
             android:textSize="10sp"
-            tools:ignore="SmallSp" />
-
+            android:textStyle="bold"
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
 
     </com.google.android.material.card.MaterialCardView>
 

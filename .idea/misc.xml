@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/back_button.xml" value="0.245" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/btn_bg.xml" value="0.31" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/container_bg.xml" value="0.245" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/edit_text_bg.xml" value="0.245" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/jobs_bg.xml" value="0.245" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/drawable/jobs_icon.xml" value="0.245" />
@@ -17,10 +18,12 @@
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/activity_splash_sreen.xml" value="0.25" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_add.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_home.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_jobs.xml" value="0.264" />
-        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_news.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_jobs.xml" value="0.33" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_my_solutions.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_news.xml" value="0.25" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_settings.xml" value="0.33" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_question_page.xml" value="0.18" />
+        <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/fragment_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/menu/bottom_nav.xml" value="0.20854700854700856" />
       </map>

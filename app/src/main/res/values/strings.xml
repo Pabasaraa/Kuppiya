@@ -27,4 +27,7 @@
     <string name="gender">Gender</string>
     <string name="employment_status">Employment status</string>
     <string name="update">Update</string>
+    <string name="add_q_msg">What\'s this about?</string>
+    <string name="type_here">Type here ...</string>
+    <string name="news">News</string>
 </resources>

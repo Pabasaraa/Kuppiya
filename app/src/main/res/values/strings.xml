@@ -13,7 +13,6 @@
     <string name="email">Email</string>
     <string name="already_a_member_signin">Already a member? Signin</string>
     <string name="sign_up">Sign up</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="my_inquiries">My inquiries</string>
     <string name="my_solutions">My solutions</string>
@@ -30,4 +29,5 @@
     <string name="add_q_msg">What\'s this about?</string>
     <string name="type_here">Type here ...</string>
     <string name="news">News</string>
+    <string name="add">Add</string>
 </resources>

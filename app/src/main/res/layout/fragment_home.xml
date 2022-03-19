@@ -11,7 +11,7 @@
         android:id="@+id/cv_question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@color/surface"
         app:cardBackgroundColor="@color/surface"
         app:cardCornerRadius="20dp"
@@ -110,7 +110,7 @@ $allcart[] = $_SESSION['shopping_cart']; ….."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline24"

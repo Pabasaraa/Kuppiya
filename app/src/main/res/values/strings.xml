@@ -32,4 +32,12 @@
     <string name="add">Add</string>
     <string name="delete">Delete</string>
     <string name="edit_question">Edit Question</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="what_s_your_question">What\'s your question</string>
+    <string name="tap_to_view_your_inquiries">Tap to view your inquiries</string>
+    <string name="solutions_you_gave">Solutions you gave</string>
+    <string name="user_profile">User profile</string>
+    <string name="account_settings">Account settings</string>
+    <string name="change">Change</string>
+    <string name="remove">Remove</string>
 </resources>

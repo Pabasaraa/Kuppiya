@@ -30,4 +30,6 @@
     <string name="type_here">Type here ...</string>
     <string name="news">News</string>
     <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="edit_question">Edit Question</string>
 </resources>

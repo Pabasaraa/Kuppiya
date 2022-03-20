@@ -72,6 +72,7 @@ public class ProfileFragment extends Fragment {
        setting = v.findViewById(R.id.settings);
        back_btn = v.findViewById(R.id.back_button_profile);
        solutions = v.findViewById(R.id.solutions);
+       inquiries = v.findViewById(R.id.inquiries);
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +117,17 @@ public class ProfileFragment extends Fragment {
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.dashboard_container, new MySolutionsFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        inquiries.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.dashboard_container, new MyInquiriesFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

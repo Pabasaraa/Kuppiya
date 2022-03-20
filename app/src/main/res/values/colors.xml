@@ -15,4 +15,6 @@
     <color name="box_stroke">#B3433C4B</color>
     <color name="box_bg">#66433C4B</color>
     <color name="edit_txt_bg">#8CFFFFFF</color>
+    <color name="fade_blue">#959CFF</color>
+    <color name="fade_red">#FF5A5A</color>
 </resources>

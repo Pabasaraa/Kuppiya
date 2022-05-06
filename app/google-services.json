@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "107406497425",
+    "firebase_url": "https://kuppiya-mad-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kuppiya-mad",
+    "storage_bucket": "kuppiya-mad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107406497425:android:47c76c0ae11a2482f95130",
+        "android_client_info": {
+          "package_name": "com.example.kuppiya_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107406497425-h3f2j9g3onnh755d77c1rf354aha974h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh6qMF39HfMoQTmpsawdb9LiEA_jcQbVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107406497425-h3f2j9g3onnh755d77c1rf354aha974h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107406497425:android:e86cbe9eebb0be02f95130",
+        "android_client_info": {
+          "package_name": "com.example.mad_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107406497425-h3f2j9g3onnh755d77c1rf354aha974h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh6qMF39HfMoQTmpsawdb9LiEA_jcQbVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107406497425-h3f2j9g3onnh755d77c1rf354aha974h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -40,7 +40,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/textView10"
+            android:id="@+id/question_title_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
         <EditText
-            android:id="@+id/textView9"
+            android:id="@+id/question_details_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -72,10 +72,10 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline17"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/question_title_add" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/update_btn_jobs"
+            android:id="@+id/update_btn_question"
             android:layout_width="0dp"
             android:layout_height="53dp"
             android:layout_marginTop="50dp"
@@ -88,7 +88,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline13"
             app:layout_constraintStart_toStartOf="@+id/guideline12"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/question_details_add" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline16"

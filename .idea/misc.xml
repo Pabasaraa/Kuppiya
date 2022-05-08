@@ -35,6 +35,10 @@
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/question.xml" value="0.14629629629629629" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/layout/question_home.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/pabas/AndroidStudioProjects/MAD_App/app/src/main/res/menu/bottom_nav.xml" value="0.20854700854700856" />
+        <entry key="..\:/kuppiyaMAD/MAD_App/app/src/main/res/layout/fragment_my_solutions.xml" value="0.25416666666666665" />
+        <entry key="..\:/kuppiyaMAD/MAD_App/app/src/main/res/layout/fragment_question_page.xml" value="0.2" />
+        <entry key="..\:/kuppiyaMAD/MAD_App/app/src/main/res/layout/fragment_update_solutions.xml" value="0.264" />
+        <entry key="..\:/kuppiyaMAD/MAD_App/app/src/main/res/layout/solutioncard.xml" value="0.264" />
       </map>
     </option>
   </component>

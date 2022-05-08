@@ -77,7 +77,7 @@ public class QuestionPageFragment extends Fragment {
         reference = rootNode.getReference("answer");
         DatabaseReference keyRef = reference.push();
 
-        textView9 = v.findViewById(R.id.textView9);
+        textView9 = v.findViewById(R.id.question_details_add);
         post_btn = v.findViewById(R.id.post_btn);
 
         String key = keyRef.getKey();

@@ -124,7 +124,7 @@ Array ( [0] => Array ( [item_varid] => 109 [item_id] => 146 [item_basename] => a
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/textView9"
+        android:id="@+id/question_details_add"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -158,7 +158,7 @@ Array ( [0] => Array ( [item_varid] => 109 [item_id] => 146 [item_basename] => a
         app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/question_details_add"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline

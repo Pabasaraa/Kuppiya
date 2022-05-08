@@ -53,7 +53,7 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/textView10"
+            android:id="@+id/question_title_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -70,7 +70,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
-            android:id="@+id/textView9"
+            android:id="@+id/question_details_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -85,10 +85,10 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline17"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/question_title_add" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/login_btn"
+            android:id="@+id/question_add_btn"
             android:layout_width="0dp"
             android:layout_height="44dp"
             android:layout_marginTop="65dp"
@@ -103,7 +103,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/question_details_add"
             tools:ignore="MissingConstraints" />
 
         <androidx.constraintlayout.widget.Guideline

@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/question_title_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -47,7 +47,7 @@
             android:layout_marginTop="15dp"
             android:src="@drawable/profile_photo"
             app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/question_title_add" />
 
         <Button
             android:id="@+id/button"

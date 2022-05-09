@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="1dp"
+    android:backgroundTint="@color/box_bg"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/surface"
+    app:strokeWidth="4dp">
+
+        <TextView
+            android:id="@+id/job_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Full-Stack Developer Full Time"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/month_salary_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="65dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="120k/month"
+            android:textColor="@color/sub_text_color"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/company_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Channel IT Solutions"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/company_location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Kadawatha"
+            android:textColor="@color/sub_text_color"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/roboto_regular"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/apply"
+            android:textAllCaps="false"
+            android:textColor="@color/background"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+    </androidx.cardview.widget.CardView>

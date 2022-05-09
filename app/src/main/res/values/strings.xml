@@ -40,4 +40,5 @@
     <string name="account_settings">Account settings</string>
     <string name="change">Change</string>
     <string name="remove">Remove</string>
+    <string name="apply">Apply</string>
 </resources>

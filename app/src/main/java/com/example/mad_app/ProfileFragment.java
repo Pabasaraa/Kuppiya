@@ -1,18 +1,15 @@
 package com.example.mad_app;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import java.util.Objects;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,6 +70,8 @@ public class ProfileFragment extends Fragment {
        back_btn = v.findViewById(R.id.back_button_profile);
        solutions = v.findViewById(R.id.solutions);
        inquiries = v.findViewById(R.id.inquiries);
+
+
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override

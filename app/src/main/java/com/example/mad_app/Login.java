@@ -116,11 +116,11 @@ public class Login extends AppCompatActivity {
 //                        FragmentManager fragmentManager = getSupportFragmentManager();
 //                        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //
-//                        Bundle bundle = new Bundle();
-//                        bundle.putString("username", usernameFromDB);
-//                        bundle.putString("name", nameFromDB);
-//                        bundle.putString("email", emailFromDB);
-//                        bundle.putString("password", passwordFromDB);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("username", usernameFromDB);
+                        bundle.putString("name", nameFromDB);
+                        bundle.putString("email", emailFromDB);
+                        bundle.putString("password", passwordFromDB);
 //                        fragment.setArguments(bundle);
 //                        fragmentTransaction.replace(R.id.dashboard_container, fragment).commit();
 
@@ -131,9 +131,10 @@ public class Login extends AppCompatActivity {
 //                        fragmentTransaction.commit();
 
                         Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                        intent.putExtras(bundle);
                         startActivity(intent);
 
-                        Toast.makeText(Login.this, "Log unoo", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Successful", Toast.LENGTH_SHORT).show();
 
                     }else {
                         password.setError("Wrong password");

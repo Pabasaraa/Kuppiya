@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/userProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
@@ -42,6 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/username_title_userprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
@@ -51,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/userProfileName" />
 
 
     <ImageView
@@ -154,7 +155,7 @@
             android:id="@+id/dob_userprofile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15/10/1997"
+            android:text="-"
             android:textColor="@color/white"
             android:fontFamily="@font/roboto_regular"
             android:textSize="18sp"
@@ -187,7 +188,7 @@
             android:id="@+id/gender_userprofile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
+            android:text="-"
             android:textColor="@color/white"
             android:fontFamily="@font/roboto_regular"
             android:textSize="18sp"
@@ -220,7 +221,7 @@
             android:id="@+id/employment_userprofile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unemployed"
+            android:text="-"
             android:textColor="@color/white"
             android:fontFamily="@font/roboto_regular"
             android:textSize="18sp"

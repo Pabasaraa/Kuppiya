@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -50,25 +51,18 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
         holder.description.setText(helperClass.getDescription());
 
         holder.updateQuestion.setOnClickListener(view -> {
-//            Intent intent = new Intent(context, UpdateInquiriesFragment.class);
-//            intent.putExtra("EDIT", (Serializable) helperClass);
-//            context.startActivity(intent);
-//            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.dashboard_container, new MyInquiriesFragment());
-//            fragmentTransaction.addToBackStack(null);
-//            fragmentTransaction.commit();
+            Bundle bundle = new Bundle();
+            bundle.putString("title", helperClass.getTitle());
+            bundle.putString("description", helperClass.getDescription());
+            bundle.putString("key", helperClass.getKey());
 
-//            ((FragmentActivity)context).getFragmentManager().beginTransaction()
-//                    .replace(R.id.dashboard_container, new UpdateInquiriesFragment())
-//                    .commit();
-//            Fragment fragment = new UpdateInquiriesFragment();
-//            Bundle data = new Bundle();
-//            data.putSerializable("data", (Serializable) helperClass);
-//            fragment.setArguments(data);
-//            FragmentManager fragmentManager = getFragmentManager();
-//
-//            fragmentManager.beginTransaction().replace(R.id.dashboard_container, fragment).commit();
+            Fragment fragment = new UpdateInquiriesFragment();
+            FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.dashboard_container, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragment.setArguments(bundle);
+            fragmentTransaction.commit();
 
 
         });

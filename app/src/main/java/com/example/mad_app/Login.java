@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,11 +36,7 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                Intent intent = new Intent(getApplicationContext(), Dashboard.class);
-                startActivity(intent);
-                finish();
+                loginUser(view);
             }
         });
 
@@ -115,14 +112,28 @@ public class Login extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
                         //add intent
-                        ProfileFragment fragment = new ProfileFragment();
+//                        ProfileFragment fragment = new ProfileFragment();
+//                        FragmentManager fragmentManager = getSupportFragmentManager();
+//                        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("username", usernameFromDB);
+//                        bundle.putString("name", nameFromDB);
+//                        bundle.putString("email", emailFromDB);
+//                        bundle.putString("password", passwordFromDB);
+//                        fragment.setArguments(bundle);
+//                        fragmentTransaction.replace(R.id.dashboard_container, fragment).commit();
 
-                        Bundle bundle = new Bundle();
-                        bundle.putString("username", usernameFromDB);
-                        bundle.putString("name", nameFromDB);
-                        bundle.putString("email", emailFromDB);
-                        bundle.putString("password", passwordFromDB);
-                        fragment.setArguments(bundle);
+//                        FragmentManager fragmentManager = getSupportFragmentManager();
+//                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                        fragmentTransaction.replace(R.id.dashboard_container, new ProfileFragment());
+//                        fragmentTransaction.addToBackStack(null);
+//                        fragmentTransaction.commit();
+
+                        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                        startActivity(intent);
+
+                        Toast.makeText(Login.this, "Log unoo", Toast.LENGTH_SHORT).show();
 
                     }else {
                         password.setError("Wrong password");

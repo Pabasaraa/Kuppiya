@@ -31,7 +31,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     DatabaseReference databaseReference;
-    QuestionAdapter questionAdapter;
+    Question_HomeAdapter question_homeAdapter;
     ArrayList<UserHelperClass> list;
     CardView question;
 
@@ -86,8 +86,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         list = new ArrayList<>();
-        questionAdapter = new QuestionAdapter(getActivity(), list);
-        recyclerView.setAdapter(questionAdapter);
+        question_homeAdapter = new Question_HomeAdapter(getActivity(), list);
+        recyclerView.setAdapter(question_homeAdapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")
@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment {
                     UserHelperClass helperClass = dataSnapshot.getValue(UserHelperClass.class);
                     list.add(helperClass);
                 }
-                questionAdapter.notifyDataSetChanged();
+                question_homeAdapter.notifyDataSetChanged();
             }
 
             @Override

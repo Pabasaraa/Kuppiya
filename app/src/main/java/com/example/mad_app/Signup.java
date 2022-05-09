@@ -21,7 +21,6 @@ public class Signup extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://kuppiya-mad-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference myRef = database.getReference("users");
-    DatabaseReference keyRef = myRef.push();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +54,16 @@ public class Signup extends AppCompatActivity {
                     String usernameStr = Objects.requireNonNull(username.getEditText()).getText().toString();
                     String emailStr = Objects.requireNonNull(email.getEditText()).getText().toString();
                     String passwordStr = Objects.requireNonNull(password.getEditText()).getText().toString();
-                    String key = keyRef.getKey();
+//                    String key = keyRef.getKey();
+                    String key = "null";
+
+                    DatabaseReference keyRef = myRef.child(usernameStr);
 
                     UsersHelperClass usersHelperClass = new UsersHelperClass(nameStr, usernameStr, emailStr, passwordStr, key);
 
                     keyRef.setValue(usersHelperClass).addOnSuccessListener(suc ->
                     {
-                        usersHelperClass.setKey(key);
+//                        usersHelperClass.setKey(key);
                         Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(getApplicationContext(), Login.class);

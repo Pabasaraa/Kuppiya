@@ -2,6 +2,7 @@ package com.example.mad_app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -45,21 +50,29 @@ public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.AnswerView
         holder.answer.setText(helperClass.getAnswer());
 
         holder.updateAnswer.setOnClickListener(view -> {
-            Intent intent = new Intent(context, UpdateSolutionsFragment.class);
-            intent.putExtra("EDIT", (Serializable) helperClass);
-            context.startActivity(intent);
+            Bundle bundle = new Bundle();
+            bundle.putString("answer", helperClass.getAnswer());
+            bundle.putString("key", helperClass.getKey());
+
+            Fragment fragment = new UpdateSolutionsFragment();
+            FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.dashboard_container, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragment.setArguments(bundle);
+            fragmentTransaction.commit();
         });
 
         holder.deleteAnswer.setOnClickListener(view -> {
             myRef.child(helperClass.getKey()).removeValue().addOnSuccessListener(suc->
             {
                 Log.d(Tag, ""+helperClass.getKey());
-                Toast.makeText(context, "Record is removed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Answer is removed", Toast.LENGTH_SHORT).show();
                 notifyItemRemoved(position);
                 list.remove(helperClass);
             }).addOnFailureListener(er->
             {
-                Toast.makeText(context, "Unsuccess", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Unsuccessful", Toast.LENGTH_SHORT).show();
             });
         });
     }

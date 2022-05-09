@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bg"
             android:gravity="start"
+            android:layout_marginTop="40dp"
             android:maxLines="10"
             android:minHeight="210dp"
             android:padding="12dp"
@@ -54,7 +55,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline17"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            tools:layout_editor_absoluteY="74dp" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/update_btn_answer"

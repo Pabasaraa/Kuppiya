@@ -13,12 +13,6 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link QuestionPageFragment#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
 public class QuestionPageFragment extends Fragment {
 
     //Variables
@@ -37,14 +31,6 @@ public class QuestionPageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment QuestionPageFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static QuestionPageFragment newInstance(String param1, String param2) {
         QuestionPageFragment fragment = new QuestionPageFragment();

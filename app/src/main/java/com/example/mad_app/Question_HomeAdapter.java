@@ -2,6 +2,7 @@ package com.example.mad_app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,10 +55,16 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
 
             @Override
             public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("title", helperClass.getTitle());
+                bundle.putString("description", helperClass.getDescription());
+
+                Fragment fragment = new QuestionPageFragment();
                 FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.dashboard_container, new QuestionPageFragment());
+                fragmentTransaction.replace(R.id.dashboard_container, fragment);
                 fragmentTransaction.addToBackStack(null);
+                fragment.setArguments(bundle);
                 fragmentTransaction.commit();
 //                Toast.makeText(context, "Hiiiiiiil", Toast.LENGTH_SHORT).show();
 //                Log.d(LOG, ""+helperClass.getKey());

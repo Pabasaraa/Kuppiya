@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DatabaseReference;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link QuestionPageFragment#newInstance} factory method to
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
  *
  */
 public class QuestionPageFragment extends Fragment {
+    DatabaseReference reference;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,7 +60,9 @@ public class QuestionPageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_question_page, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question_page, container, false);
+
+        return v;
     }
 }

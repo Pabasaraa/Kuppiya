@@ -1,12 +1,15 @@
 package com.example.mad_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -37,6 +40,15 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
     @Override
     public void onBindViewHolder(@NonNull QuestionViewHolder holder, int position) {
         UserHelperClass helperClass= list.get(position);
+        holder.title.setText(helperClass.getTitle());
+        holder.description.setText(helperClass.getDescription());
+        
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Hiiiiiiil", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
@@ -47,12 +59,14 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
 
     public static class QuestionViewHolder extends RecyclerView.ViewHolder{
         TextView title, description;
+        CardView card;
 
         public QuestionViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.title1);
             description = itemView.findViewById(R.id.details1);
+            card = itemView.findViewById(R.id.cardv);
         }
 
     }

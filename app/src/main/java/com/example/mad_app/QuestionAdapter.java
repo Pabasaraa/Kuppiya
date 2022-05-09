@@ -2,6 +2,7 @@ package com.example.mad_app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder>{
+public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder> {
 
     Context context;
     ArrayList<UserHelperClass> list;
@@ -40,15 +44,33 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.Questi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull QuestionViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull QuestionViewHolder holder, int position){
         UserHelperClass helperClass= list.get(position);
         holder.title.setText(helperClass.getTitle());
         holder.description.setText(helperClass.getDescription());
 
         holder.updateQuestion.setOnClickListener(view -> {
-            Intent intent = new Intent(context, UpdateInquiriesFragment.class);
-            intent.putExtra("EDIT", (Serializable) helperClass);
-            context.startActivity(intent);
+//            Intent intent = new Intent(context, UpdateInquiriesFragment.class);
+//            intent.putExtra("EDIT", (Serializable) helperClass);
+//            context.startActivity(intent);
+//            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.dashboard_container, new MyInquiriesFragment());
+//            fragmentTransaction.addToBackStack(null);
+//            fragmentTransaction.commit();
+
+//            ((FragmentActivity)context).getFragmentManager().beginTransaction()
+//                    .replace(R.id.dashboard_container, new UpdateInquiriesFragment())
+//                    .commit();
+//            Fragment fragment = new UpdateInquiriesFragment();
+//            Bundle data = new Bundle();
+//            data.putSerializable("data", (Serializable) helperClass);
+//            fragment.setArguments(data);
+//            FragmentManager fragmentManager = getFragmentManager();
+//
+//            fragmentManager.beginTransaction().replace(R.id.dashboard_container, fragment).commit();
+
+
         });
 
         holder.deleteQuestion.setOnClickListener(view -> {

@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import com.google.firebase.database.DatabaseReference;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link QuestionPageFragment#newInstance} factory method to
@@ -20,13 +22,13 @@ import com.google.firebase.database.FirebaseDatabase;
  *
  */
 public class QuestionPageFragment extends Fragment {
+    DatabaseReference reference;
 
     //Variables
     EditText textView9;
     Button post_btn;
 
     FirebaseDatabase rootNode;
-    DatabaseReference reference;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -72,6 +74,9 @@ public class QuestionPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_question_page, container, false);
+//<<<<<<< HEAD
+//        // Inflate the layout for this fragment
+//=======
 
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("answer");
@@ -101,6 +106,7 @@ public class QuestionPageFragment extends Fragment {
                 });
             }
         });
+//>>>>>>> 29a83bffc530bee6a7cb85d67e7423ddbcd3f98f
 
         return v;
     }

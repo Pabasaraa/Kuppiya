@@ -7,13 +7,13 @@
     android:background="@color/background"
     tools:context=".JobsFragment">
 
-    <ImageView
-        android:id="@+id/back_button_jobs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back_button"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+<!--    <ImageView-->
+<!--        android:id="@+id/back_button_jobs"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/back_button"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline9"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline10" />-->
 
     <TextView
         android:id="@+id/question_details_add"

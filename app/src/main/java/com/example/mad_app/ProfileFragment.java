@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -15,7 +14,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class ProfileFragment extends Fragment {
     Button inquiries, solutions, profile, setting, help, signout;
-    ImageView back_btn;
     TextView profileName, profileUsername;
     Bundle bundle;
 
@@ -26,7 +24,6 @@ public class ProfileFragment extends Fragment {
 
        profile = v.findViewById(R.id.profile);
        setting = v.findViewById(R.id.settings);
-       back_btn = v.findViewById(R.id.back_button_profile);
        solutions = v.findViewById(R.id.solutions);
        inquiries = v.findViewById(R.id.inquiries);
        profileName = v.findViewById(R.id.profileName);
@@ -52,19 +49,6 @@ public class ProfileFragment extends Fragment {
                 fragmentTransaction.replace(R.id.dashboard_container, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragment.setArguments(bundle);
-                fragmentTransaction.commit();
-            }
-        });
-
-        back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                requireActivity().onBackPressed();
-                Fragment fragment = new HomeFragment();
-                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.dashboard_container, fragment);
-                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

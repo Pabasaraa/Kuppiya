@@ -111,24 +111,12 @@ public class Login extends AppCompatActivity {
                         String nameFromDB = snapshot.child(userEnteredUsername).child("name").getValue(String.class);
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
 
-                        //add intent
-//                        ProfileFragment fragment = new ProfileFragment();
-//                        FragmentManager fragmentManager = getSupportFragmentManager();
-//                        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
+
                         Bundle bundle = new Bundle();
                         bundle.putString("username", usernameFromDB);
                         bundle.putString("name", nameFromDB);
                         bundle.putString("email", emailFromDB);
                         bundle.putString("password", passwordFromDB);
-//                        fragment.setArguments(bundle);
-//                        fragmentTransaction.replace(R.id.dashboard_container, fragment).commit();
-
-//                        FragmentManager fragmentManager = getSupportFragmentManager();
-//                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                        fragmentTransaction.replace(R.id.dashboard_container, new ProfileFragment());
-//                        fragmentTransaction.addToBackStack(null);
-//                        fragmentTransaction.commit();
 
                         Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                         intent.putExtras(bundle);

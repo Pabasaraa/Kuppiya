@@ -1,5 +1,8 @@
 package com.example.mad_app;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -18,6 +23,7 @@ public class Signup extends AppCompatActivity {
 
     Button signup, alreadyMember;
     TextInputLayout name, username, email, password;
+    public String CHANNEL_ID = "Id_3";
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://kuppiya-mad-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference myRef = database.getReference("users");
@@ -26,6 +32,13 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        CharSequence nameNotify = "User update notification";
+        int importance = NotificationManager.IMPORTANCE_DEFAULT;
+        NotificationChannel channel = new NotificationChannel(CHANNEL_ID, nameNotify, importance);
+        channel.setDescription("Notification that shows when user details updated.");
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(channel);
 
         signup = findViewById(R.id.signup_btn);
         alreadyMember = findViewById(R.id.already_member);
@@ -63,11 +76,29 @@ public class Signup extends AppCompatActivity {
 
                     keyRef.setValue(usersHelperClass).addOnSuccessListener(suc ->
                     {
+                        Intent intentNotify = new Intent(getApplicationContext(), Login.class);
+                        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intentNotify, 0);
+
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                                .setSmallIcon(R.drawable.logo)
+                                .setContentTitle("Success!")
+                                .setContentText("Hello "+username.getEditText().getText().toString()+" you registered successfully.")
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                                .setContentIntent(pendingIntent)
+                                .setAutoCancel(true);
+
+                        NotificationManagerCompat notificationManagerr = NotificationManagerCompat.from(getApplicationContext());
+                        notificationManagerr.notify(0, builder.build());
+
+                        Toast.makeText(getApplicationContext(), "Record is updated", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), Login.class);
+                        startActivity(intent);
+
 //                        usersHelperClass.setKey(key);
                         Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(getApplicationContext(), Login.class);
-                        startActivity(intent);
+                        Intent intent2 = new Intent(getApplicationContext(), Login.class);
+                        startActivity(intent2);
                         finish();
                     }).addOnFailureListener(er ->
                     {

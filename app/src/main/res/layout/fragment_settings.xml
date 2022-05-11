@@ -111,7 +111,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="James Scotlends" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +134,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="jamesS12" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +157,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="jamescot@gmail.com" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +180,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="15/10/1997" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -198,7 +198,7 @@
             app:layout_constraintTop_toBottomOf="@+id/dob_settings" />
 
         <RadioGroup
-            android:id="@+id/radioGroup2"
+            android:id="@+id/gender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -249,7 +249,7 @@
             android:src="@color/sub_text_color"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
             app:layout_constraintStart_toStartOf="@+id/guideline10"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
 
         <TextView
             android:id="@+id/textView12"
@@ -265,7 +265,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
         <RadioGroup
-            android:id="@+id/radioGroup3"
+            android:id="@+id/employmentStatus_settings"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -306,7 +306,7 @@
         </RadioGroup>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup_btn"
+            android:id="@+id/update_btn_setting"
             android:layout_width="0dp"
             android:layout_height="47dp"
             android:layout_marginStart="10dp"
@@ -322,7 +322,7 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline14"
             app:layout_constraintEnd_toStartOf="@+id/guideline13"
             app:layout_constraintStart_toStartOf="@+id/guideline12"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+            app:layout_constraintTop_toBottomOf="@+id/employmentStatus_settings" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline9"

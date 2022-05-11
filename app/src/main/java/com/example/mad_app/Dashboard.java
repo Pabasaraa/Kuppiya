@@ -35,6 +35,7 @@ public class Dashboard extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.home_nav:
                         fragment = new HomeFragment();
+                        fragment.setArguments(bundle);
                         break;
                     case R.id.news_nav:
                         fragment = new NewsFragment();

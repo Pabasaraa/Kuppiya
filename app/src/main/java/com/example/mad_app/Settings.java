@@ -13,13 +13,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Objects;
@@ -27,7 +32,7 @@ import java.util.Objects;
 public class Settings extends Fragment {
     TextInputLayout name, username, email, dob;
     RadioGroup gender, employment;
-    RadioButton selectedGender, selectedEmployment;
+    RadioButton selectedGender, selectedEmployment, male, female, employed, unemployed;
     Button updateBtn;
     public String CHANNEL_ID = "Id_2";
 
@@ -53,20 +58,69 @@ public class Settings extends Fragment {
         updateBtn = v.findViewById(R.id.update_btn_setting);
         gender = v.findViewById(R.id.gender);
         employment = v.findViewById(R.id.employmentStatus_settings);
+        male = v.findViewById(R.id.rbMaleEP);
+        female = v.findViewById(R.id.rbFemaleEP);
+        employed = v.findViewById(R.id.employed);
+        unemployed = v.findViewById(R.id.unemployed);
 
         Bundle bundle = this.getArguments();
+        String usernameStr = null;
 
         if (bundle != null) {
-            String nameStr = bundle.getString("name");
-            String usernameStr = bundle.getString("username");
-            String emailStr = bundle.getString("email");
-            String dobStr = bundle.getString("dob");
-
-            Objects.requireNonNull(name.getEditText()).setText(nameStr);
-            Objects.requireNonNull(username.getEditText()).setText(usernameStr);
-            Objects.requireNonNull(email.getEditText()).setText(emailStr);
-            Objects.requireNonNull(dob.getEditText()).setText(dobStr);
+            usernameStr = bundle.getString("username");
         }
+
+
+        DatabaseReference reference = FirebaseDatabase.getInstance ( "https://kuppiya-mad-default-rtdb.asia-southeast1.firebasedatabase.app" ).getReference ( "users" );
+
+        Query checkUser = reference.orderByChild ("username").equalTo(usernameStr);
+
+        String finalBundleUsername = usernameStr;
+        checkUser.addListenerForSingleValueEvent ( new ValueEventListener ( ) {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists ( )) {
+
+                    String usernameFromDB = snapshot.child ( finalBundleUsername ).child ( "username" ).getValue ( String.class );
+                    String nameFromDB = snapshot.child ( finalBundleUsername ).child ( "name" ).getValue ( String.class );
+                    String emailFromDB = snapshot.child ( finalBundleUsername ).child ( "email" ).getValue ( String.class );
+                    String dobFromDB = snapshot.child ( finalBundleUsername ).child ( "dob" ).getValue ( String.class );
+                    String genderFromDB = snapshot.child ( finalBundleUsername ).child ( "gender" ).getValue ( String.class );
+                    String statusFromDB = snapshot.child ( finalBundleUsername ).child ( "employment" ).getValue ( String.class );
+
+                    Bundle bundle = new Bundle ( );
+                    bundle.putString ( "username" , usernameFromDB );
+                    bundle.putString ( "name" , nameFromDB );
+                    bundle.putString ( "email" , emailFromDB );
+                    bundle.putString ( "dob" , dobFromDB );
+                    bundle.putString ( "gender" , genderFromDB );
+                    bundle.putString ( "status" , statusFromDB );
+
+                    Objects.requireNonNull(name.getEditText()).setText(nameFromDB);
+                    Objects.requireNonNull(username.getEditText()).setText(usernameFromDB);
+                    Objects.requireNonNull(email.getEditText()).setText(emailFromDB);
+                    Objects.requireNonNull(dob.getEditText()).setText(dobFromDB);
+
+                    if (Objects.equals(genderFromDB ,"Male")){
+                        male.setChecked(true);
+                    }else{
+                        female.setChecked(true);
+                    }
+
+                    if (Objects.equals(statusFromDB ,"Employed")){
+                        employed.setChecked(true);
+                    }else{
+                        unemployed.setChecked(true);
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         updateBtn.setOnClickListener(view -> {
             int selectedIdGender = gender.getCheckedRadioButtonId();
@@ -103,8 +157,7 @@ public class Settings extends Fragment {
                 notificationManagerr.notify(0, builder.build());
 
                 Toast.makeText(getContext(), "Record is updated", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getContext(), Login.class);
-                startActivity(intent);
+                requireActivity().onBackPressed();
 
             }).addOnFailureListener(er ->
             {

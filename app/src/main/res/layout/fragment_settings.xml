@@ -111,7 +111,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="James Scotlends" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +134,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="jamesS12" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +157,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="jamescot@gmail.com" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +180,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:text="" />
+                android:text="@string/none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,7 +217,6 @@
                 android:buttonTint="@color/white"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Male"
-                android:checked="true"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="14sp"
@@ -285,7 +284,6 @@
                 android:buttonTint="@color/white"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Employed"
-                android:checked="true"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="14sp"

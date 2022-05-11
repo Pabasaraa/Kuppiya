@@ -33,11 +33,17 @@ public class UserProfile extends Fragment {
             String BundleName = bundle.getString("name");
             String BundleUsername = bundle.getString("username");
             String BundleEmail = bundle.getString("email");
+            String BundleDOb = bundle.getString("dob");
+            String BundleGender = bundle.getString("gender");
+            String BundleStatus = bundle.getString("status");
 
             name.setText(BundleName);
             username.setText(BundleUsername);
             email.setText(BundleEmail);
             username2.setText(BundleUsername);
+            dob.setText(BundleDOb);
+            gender.setText(BundleGender);
+            status.setText(BundleStatus);
         }
 
         back_btn.setOnClickListener(new View.OnClickListener() {

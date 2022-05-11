@@ -110,13 +110,18 @@ public class Login extends AppCompatActivity {
                         String usernameFromDB = snapshot.child(userEnteredUsername).child("username").getValue(String.class);
                         String nameFromDB = snapshot.child(userEnteredUsername).child("name").getValue(String.class);
                         String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
-
+                        String dobFromDB = snapshot.child(userEnteredUsername).child("dob").getValue(String.class);
+                        String genderFromDB = snapshot.child(userEnteredUsername).child("gender").getValue(String.class);
+                        String statusFromDB = snapshot.child(userEnteredUsername).child("employment").getValue(String.class);
 
                         Bundle bundle = new Bundle();
                         bundle.putString("username", usernameFromDB);
                         bundle.putString("name", nameFromDB);
                         bundle.putString("email", emailFromDB);
                         bundle.putString("password", passwordFromDB);
+                        bundle.putString("dob", dobFromDB);
+                        bundle.putString("gender", genderFromDB);
+                        bundle.putString("status", statusFromDB);
 
                         Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                         intent.putExtras(bundle);

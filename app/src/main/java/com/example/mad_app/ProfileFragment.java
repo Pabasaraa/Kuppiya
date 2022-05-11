@@ -61,6 +61,7 @@ public class ProfileFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.dashboard_container, fragment);
                 fragmentTransaction.addToBackStack(null);
+                fragment.setArguments(bundle);
                 fragmentTransaction.commit();
             }
         });

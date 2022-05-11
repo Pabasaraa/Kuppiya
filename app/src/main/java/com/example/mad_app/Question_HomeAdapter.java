@@ -29,7 +29,7 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
     ArrayList<UserHelperClass> list;
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://kuppiya-mad-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference myRef = database.getReference("question");
-    private String Tag = "hi";
+
 
     public Question_HomeAdapter(Context context, ArrayList<UserHelperClass> list) {
         this.context = context;
@@ -48,10 +48,8 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
         UserHelperClass helperClass= list.get(position);
         holder.title.setText(helperClass.getTitle());
         holder.description.setText(helperClass.getDescription());
-        
-        holder.card.setOnClickListener(new View.OnClickListener() {
-            private static final String LOG = "hiiiiiii";
 
+        holder.card.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -66,8 +64,7 @@ public class Question_HomeAdapter extends RecyclerView.Adapter<Question_HomeAdap
                 fragmentTransaction.addToBackStack(null);
                 fragment.setArguments(bundle);
                 fragmentTransaction.commit();
-//                Toast.makeText(context, "Hiiiiiiil", Toast.LENGTH_SHORT).show();
-//                Log.d(LOG, ""+helperClass.getKey());
+
             }
         });
     }
